@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title>Tymoczko Scale Network: 7-Note Pressing Scales</title>
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <style> body {padding: 0; margin: 0;} </style>
+
+    <!-- use jquery for websockets
+    websockets io goes here -->
+
+    <script src="jQuery.js"></script>
+    <script src="socket.io.js"></script>
+
+    <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+    <script language="javascript" src="libraries/p5.dom.js"></script>
+    <script language="javascript" src="libraries/p5.sound.js"></script>
+
+    <script language="javascript" type="text/javascript" src="vexflow-debug.js"></script>
+    <script language="javascript" type="text/javascript" src="videoSwitchIndex.js"></script>
+    <script language="javascript" type="text/javascript" src="data.js"></script>
+    <script language="javascript" type="text/javascript" src="lilypond.js"></script>
+    <script language="javascript" type="text/javascript" src="voicings.js"></script>
+    <script language="javascript" type="text/javascript" src="notation.js"></script>
+    <script language="javascript" type="text/javascript" src="sketch.js"></script>
+
+
+    <!--<script src="miditest.js"></script>-->
+    <style>
+body {margin:0;}
+
+/*html{cursor: none;}*/
+
+.button {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 4%;
+}
+
+.navbar a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+#boo {
+  position: fixed;
+  top: 0;
+}
+
+
+
+
+</style>
+  </head>
+  <body>
+  	<div id="boo"></div>
+    <p align="center">
+    <div class="navbar">
+      <button class="button" onclick="killswitch()">off</button>
+    </div>
+  </body>
+</html>

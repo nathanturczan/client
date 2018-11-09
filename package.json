@@ -1,0 +1,25 @@
+{
+  "name": "visualizer",
+  "version": "1.0.0",
+  "description": "it's a server js file, a client js file, and a master js file for network music",
+  "main": "data.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/nathanturczan/client"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "network_music"
+  ],
+  "author": "Nathan Turczan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1"
+  }
+}

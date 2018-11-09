@@ -1,0 +1,124 @@
+<!-- this can be hosted on my machine, they go there -->
+
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		<meta charset="UTF-8">
+		<title>harmony client</title>
+		<meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+		<style> 
+			body {padding: 0; margin: 0;} 
+			.button {
+			    background-color: #4CAF50; /* Green */
+			    border: none;
+			    color: white;
+			    padding: 15px 32px;
+			    text-align: center;
+			    text-decoration: none;
+			    display: inline-block;
+			    font-size: 16px;
+			    margin: 4px 2px;
+			    cursor: pointer;
+			}
+
+			.switch {
+			  text-align: center;
+			  position: relative;
+			  display: inline-block;
+			  width: 60px;
+			  height: 34px;
+			}
+
+			.switch input { 
+			  opacity: 0;
+			  width: 0;
+			  height: 0;
+			}
+
+			.slider {
+			  text-align: center;
+			  position: absolute;
+			  cursor: pointer;
+			  top: 0;
+			  left: 0;
+			  right: 0;
+			  bottom: 0;
+			  background-color: #ccc;
+			  -webkit-transition: .4s;
+			  transition: .4s;
+			}
+
+			.slider:before {
+			  position: absolute;
+			  content: "";
+			  height: 26px;
+			  width: 26px;
+			  left: 4px;
+			  bottom: 4px;
+			  background-color: white;
+			  -webkit-transition: .4s;
+			  transition: .4s;
+			}
+
+			input:checked + .slider {
+			  background-color: #2196F3;
+			}
+
+			input:focus + .slider {
+			  box-shadow: 0 0 1px #2196F3;
+			}
+
+			input:checked + .slider:before {
+			  -webkit-transform: translateX(26px);
+			  -ms-transform: translateX(26px);
+			  transform: translateX(26px);
+			}
+
+			/* Rounded sliders */
+			.slider.round {
+			  border-radius: 34px;
+			}
+
+			.slider.round:before {
+			  border-radius: 50%;
+			}
+
+			#boo {
+  			  position: fixed;
+  			  top: 0;
+			}
+		</style>
+		<script src="socket.io.js"></script>
+		<script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+		<script language="javascript" type="text/javascript" src="data.js"></script>
+		<script language="javascript" type="text/javascript" src="client.js"></script>
+    	<script language="javascript" type="text/javascript" src="lilypond.js"></script>
+		<script language="javascript" type="text/javascript" src="vexflow-debug.js"></script>
+		<script language="javascript" type="text/javascript" src="notation.js"></script>
+	</head>
+	<body>
+		<div id="boo"></div>
+		<h2 align="right">Harmony Client</h2>
+
+		<p style="text-align:right;">press the "map" button to map your scale_rack</p>
+	    <p align="center">
+	    <!-- <button onclick="myFunction()">Try it</button> -->
+	    <button class="button" onclick="map_chan1_0to47();">map</button>
+
+
+	    <h2 align="right">Listening to master?</h2>
+	    <p style="text-align:right;">turn on the toggle when you're ready to start receiving the scale index!</p>
+	    <img src="frodo.jpg" alt="frodo is your master" align="right">
+	    
+	    <p align="center">
+		<label class="switch">
+		  <input type="checkbox" onclick="recieving_and_transmitting_index()">
+		  <span class="slider round"></span>
+		</label>
+
+		<!-- <label class="switch">
+		  <input type="checkbox" checked>
+		  <span class="slider round"></span>
+		</label> -->
+	</body>
+</html>
